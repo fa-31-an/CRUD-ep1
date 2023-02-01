@@ -18,9 +18,8 @@ const controller = {
 
 	// Detail - Detail from one product
 	detail: (req, res) => {
-		let getID = req.params.id;
-		let productByID = products.find(producto => producto.id === +getID );
-		let priceSale = productByID.price * (100 - productByID.discount) / 100
+		let productByID = products.find(producto => producto.id == req.params.id );
+		let priceSale = productByID.price * (100 - productByID.discount) / 100;
 		
 		res.render('detail.ejs', {
 			productByID,
@@ -32,7 +31,7 @@ const controller = {
 
 	// Create - Form to create
 	create: (req, res) => {
-		res.render('product-create-form.ejs')
+		res.render('product-create-form.ejs');
 	},
 	
 	// Create -  Method to store
