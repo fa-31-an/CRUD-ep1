@@ -31,11 +31,11 @@
               <h2 class="product-detail-title"><%= productByID.name %></h2>
 
               <p class="product-detail-price small">
-                <span>$<%= toThousand(productByID.price) %></span>
+                <span>$<%= toThousand(decimalComma(productByID.price)) %></span>
                 /
                 <b><%= productByID.discount %>% OFF</b>
               </p>
-              <p class="product-detail-price">$<%= toThousand(priceSale) %></p>
+              <p class="product-detail-price">$<%= toThousand(decimalComma(priceSale)) %></p>
               <!-- <p class="product-detail-price">$PRICE</p> -->
 
               <ul class="actions-list">
