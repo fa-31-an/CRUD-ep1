@@ -26,8 +26,10 @@
               </figure>
               <article class="product-box_data">
                 <h2><%- toThousand(producto.price) %></h2>
-                <span><%- producto.discount %>% OFF </span>
-                <p><%- producto.name %>></p>
+                <% if (producto.discount > 0) { %>
+                  <span><%- producto.discount %>% OFF </span>
+                <% } %>
+                <p><%- producto.name %></p>
                 <i class="fas fa-truck"></i>
               </article>
             </a>

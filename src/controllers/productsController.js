@@ -3,6 +3,9 @@ const path = require('path');
 
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const writeJSON = function(products){
+	fs.writeFileSync(productsFilePath, JSON.stringify(products), 'utf-8');
+};
 
 const decimalComma = n => n.toString().replace('.', ",");
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
@@ -36,9 +39,19 @@ const controller = {
 	
 	// Create -  Method to store
 	store: (req, res) => {
-		let newProduct = req.query;
+		let lastID = products[products.length - 1].id;
+		let newProduct = {
+			id: lastID + 1,
+			name: req.body.name,
+			description: req.body.description,
+			price: req.body.price,
+			discount: req.body.discount,
+			category: req.body.category,
+			image: 'default-image.png',
+		};
 		products.push(newProduct);
-
+		writeJSON(products);
+		res.redirect('/products/');
 	},
 
 	// Update - Form to edit
