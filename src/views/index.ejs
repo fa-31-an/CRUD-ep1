@@ -34,7 +34,7 @@
                 <% if (producto.discount > 0) { %>
                   <span><%- producto.discount %>% OFF </span>
                 <% } %>
-                <p><%- producto.name %>></p>
+                <p><%- producto.name %></p>
                 <i class="fas fa-truck"></i>
               </article>
             </a>
@@ -65,7 +65,7 @@
 				  <article class="product-box_data">
 					<h2><%- toThousand(decimalComma(producto.price * (100 - producto.discount) / 100)) %></h2>
 					<span><%- producto.discount %>% OFF </span>
-					<p><%- producto.name %>></p>
+					<p><%- producto.name %></p>
 					<i class="fas fa-truck"></i>
 				  </article>
 				</a>
