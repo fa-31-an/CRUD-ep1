@@ -169,14 +169,5 @@
     "discount": "0",
     "category": "visited",
     "image": "img-jagermeister.jpg"
-  },
-  {
-    "id": 21,
-    "name": "Jägermeister",
-    "description": "In your hands you hold our Jägermeister - based on a secret recipe of 56 selected botanicals out of which our elixir is gently extracted. It then resides in oak barrels to harmonize the herbal liqueur. Best serverd ice-cold. Drink responsibly.\r\n75cl - 750ml.\r\n35%vol - 70 proof.",
-    "price": "12000",
-    "discount": "0",
-    "category": "visited",
-    "image": "img-jagermeister.jpg"
   }
 ]
