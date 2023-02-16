@@ -16,6 +16,7 @@ const controller = {
     res.render("products.ejs", {
       products,
       toThousand,
+      decimalComma,
     });
   },
 

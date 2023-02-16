@@ -1,4 +1,4 @@
-«<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
   <!-- Include Head -->
   <%- include('partials/head', {title: 'Todos los productos'}) %>
@@ -25,7 +25,7 @@
                 />
               </figure>
               <article class="product-box_data">
-                <h2><%- toThousand(producto.price) %></h2>
+                <h2><%- toThousand(decimalComma(producto.price * (100 - producto.discount) / 100)) %></h2>
                 <% if (producto.discount > 0) { %>
                   <span><%- producto.discount %>% OFF </span>
                 <% } %>
